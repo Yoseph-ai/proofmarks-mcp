@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proofmarks MCP Server – AI‑Native Document Verification</title>
+<meta name="description" content="MCP server for Hedera document timestamping and verification. Integrate with Claude, Cursor, Windsurf. 600+ downloads in week one.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Space Grotesk',sans-serif;background:#f4f3ee;color:#1a1f2e;line-height:1.6}
+  .container{max-width:1120px;margin:0 auto;padding:0 5%}
+  nav{padding:20px 0;border-bottom:1px solid rgba(0,0,0,0.1)}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#1a1f2e}
+  .brand-icon{width:30px;height:30px}
+  .brand-text{font-weight:700;letter-spacing:0.14em;text-transform:uppercase}
+  h1{font-size:clamp(36px,5vw,52px);font-weight:700;margin:40px 0 16px}
+  .badge{background:#1D9E75;color:white;padding:4px 12px;border-radius:20px;font-size:12px;display:inline-block}
+  .npm-cmd{background:#1a1f2e;color:#1D9E75;padding:12px 18px;border-radius:8px;font-family:'Space Mono',monospace;margin:20px 0}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin:40px 0}
+  .card{border:1px solid #e0e0e0;border-radius:12px;padding:24px;background:white}
+  .card h3{font-size:20px;margin-bottom:12px}
+  .btn{display:inline-block;background:#1D9E75;color:white;padding:12px 28px;border-radius:40px;text-decoration:none;margin-top:20px}
+  footer{margin-top:60px;padding:40px 0;border-top:1px solid #e0e0e0;text-align:center;color:#6c757d}
+  @media(max-width:700px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav><div class="container"><a href="/" class="brand"><svg class="brand-icon" viewBox="0 0 30 30" fill="none"><rect x="6" y="14" width="18" height="13" rx="2.5" fill="#1D9E75"/><path d="M10 14V10a5 5 0 0110 0v4" stroke="#0F6E56" stroke-width="2.5"/><circle cx="15" cy="20.5" r="2.2" fill="white"/></svg><span class="brand-text">Proofmarks MCP</span></a></div></nav>
+<div class="container">
+  <div><span class="badge">MCP Server – Production Ready</span></div>
+  <h1>AI Agent <span style="color:#1D9E75">Trust Layer</span></h1>
+  <p style="font-size:18px; margin-bottom:24px">Give your AI agents the ability to verify and timestamp documents on Hedera – with one npm install.</p>
+  <div class="npm-cmd">npm install @yoseph-ai/hedera-verify-mcp</div>
+  <div class="grid">
+    <div class="card"><h3>🔍 verify_document_hash</h3><p>Check if a SHA‑256 hash exists on the Hedera mainnet. Returns timestamp, sequence number, and certificate ID.</p></div>
+    <div class="card"><h3>📌 timestamp_document_hash</h3><p>Anchor a hash to the Hedera Consensus Service (HCS). Returns a signed JWT receipt and immutable proof.</p></div>
+  </div>
+  <div class="card"><h3>⚙️ Configuration (Claude Desktop / Cursor)</h3>
+    <pre style="background:#f0f0f0; padding:12px; border-radius:8px; font-size:12px; overflow-x:auto">{
+  "mcpServers": {
+    "hedera-verify": {
+      "command": "npx",
+      "args": ["-y", "@yoseph-ai/hedera-verify-mcp"],
+      "env": {
+        "TRUSTANCHOR_API_URL": "https://app.proofmarks.cloud",
+        "TRUSTANCHOR_API_KEY": "your-api-key"
+      }
+    }
+  }
+}</pre></div>
+  <div class="card"><h3>📦 Resources</h3><p><a href="https://www.npmjs.com/package/@yoseph-ai/hedera-verify-mcp" target="_blank">NPM Package</a><br><a href="https://github.com/Yoseph-ai/hedera-verify-mcp" target="_blank">GitHub Repository</a><br><a href="https://app.proofmarks.cloud">Try the web app →</a></p></div>
+  <a href="https://app.proofmarks.cloud" class="btn">Get an API Key</a>
+</div>
+<footer><div class="container">© 2026 Proofmarks. Open source and MIT licensed.</div></footer>
+</body>
+</html>
